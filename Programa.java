@@ -27,10 +27,10 @@ class Producto {
             return false;
         }
     }
-
+    int nuevo = 0;
     public void duplico(){
         if(stock() == 0){
-            stockInicial = stockInicial * 2;
+             nuevo = stockInicial * 2;
             System.out.println("Este inventario a sido duplicado");
         }
     }
@@ -39,9 +39,15 @@ class Producto {
         System.out.println("Informacion del producto " + id);
         System.out.println("Nombre: " + nombre);
         System.out.println("Stock al iniciar el dia: " + stockInicial);
-        System.out.println("Stock disponible: " + stock());
         System.out.println("Cantidad vendida: " + cantidadVendida);
-
+        System.out.println("Stock disponible: " + stock());
+    }
+    public void info2(){
+        System.out.println("Informacion del producto " + id);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Stock al iniciar el dia: " + stockInicial);
+        System.out.println("Cantidad vendida: " + cantidadVendida);
+        System.out.println("Stock disponible: " + nuevo);
     }
 
 }
@@ -91,7 +97,7 @@ public class Programa {
                             producto.info();
                         if (producto.stock() == 0){
                             producto.duplico();
-                            producto.info();
+                            producto.info2();
                         }
                     }
                         break;
